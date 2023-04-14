@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-fpath=(${ZDOTDIR}/plugins/completion $fpath)
+fpath=(${ZDOTDIR}/plugins/completions $fpath)
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
@@ -45,6 +45,7 @@ source ${ZDOTDIR}/plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 source ${ZDOTDIR}/plugins/zsh-fzf-history-search.zsh
 source ${ZDOTDIR}/plugins/sudo.zsh
+source ${ZDOTDIR}/plugins/dirhistory.plugin.zsh
 
 source ${ZDOTDIR}/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
